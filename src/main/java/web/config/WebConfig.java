@@ -99,9 +99,9 @@ public class WebConfig implements WebMvcConfigurer {
     private Properties hibernateProperties() {
         Properties properties = new Properties();
 
-        properties.put("db.dialect", env.getRequiredProperty("db.dialect"));
-        properties.put("db.show_sql", env.getRequiredProperty("db.show_sql"));
-        properties.put("db.hdm2ddl", env.getRequiredProperty("db.hbm2ddl.auto"));
+        properties.put("hibernate.dialect", env.getRequiredProperty("hibernate.dialect"));
+        properties.put("hibernate.show_sql", env.getRequiredProperty("hibernate.show_sql"));
+        properties.put("hibernate.hdm2ddl.auto", env.getRequiredProperty("hibernate.hbm2ddl.auto"));
 
         return properties;
     }
